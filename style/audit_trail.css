@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-color: transparent;
+    --text-main: rgba(15, 23, 42, 0.6);
+    --text-muted: #64748b;
+    --card-bg: rgba(30, 41, 59, 0.7); backdrop-filter: blur(16px);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --accent-color: #60a5fa;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    margin-left: 0;
+    flex: 1;
+    transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content.collapsed {
+    margin-left: 0;
+    /* collapsed width */
+}
+
+.page-header {
+    background: var(--card-bg);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+.page-header h1 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.header-user {
+    font-weight: 500;
+    color: #cbd5e1;
+    background: transparent;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+}
+
+.container {
+    padding: 2rem;
+    flex: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.filters {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 200px;
+    flex: 1;
+}
+
+.input-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #f8fafc;
+}
+
+.input-group select {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.875rem;
+    color: #f8fafc;
+    background-color: var(--bg-color);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.btn-filter {
+    background: var(--accent-color);
+    color: #f8fafc;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    height: 42px;
+}
+
+.btn-filter:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+}
+
+.btn-reset {
+    background: transparent;
+    color: #f8fafc;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    height: 42px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-reset:hover {
+    background: #e2e8f0;
+}
+
+.audit-table-container {
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.audit-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.audit-table th {
+    background: rgba(15, 23, 42, 0.6);
+    padding: 1rem 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    color: #cbd5e1;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.audit-table td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    color: #f8fafc;
+    font-size: 0.875rem;
+    vertical-align: top;
+}
+
+.audit-table tr:hover td {
+    background: rgba(15, 23, 42, 0.6);
+}
+
+.timestamp {
+    color: #cbd5e1;
+    white-space: nowrap;
+    font-family: monospace;
+    font-size: 0.85rem !important;
+}
+
+.admin-name {
+    font-weight: 600;
+}
+
+.action-badge {
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    color: #f8fafc;
+}
+
+.bg-create {
+    background: #10b981;
+}
+
+.bg-update {
+    background: #3b82f6;
+}
+
+.bg-delete {
+    background: #ef4444;
+}
+
+.bg-login {
+    background: #8b5cf6;
+}
+
+.entity-tag {
+    background: #e2e8f0;
+    color: #475569;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.entity-id {
+    color: #cbd5e1;
+}
+
+.details-wrapper {
+    max-width: 350px;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+.ip-addr {
+    font-family: monospace;
+    color: #cbd5e1;
+    font-size: 0.85rem !important;
+}
+
+.no-data {
+    text-align: center;
+    padding: 3rem !important;
+    color: var(--text-muted) !important;
+    font-style: italic;
+}
+
+.pagination {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.pagination a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
+    padding: 0 0.5rem;
+    border-radius: 6px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: #f8fafc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.pagination a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.pagination a.active {
+    background: var(--accent-color);
+    color: #f8fafc;
+    border-color: var(--accent-color);
+}
+
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #cbd5e1;
+    font-size: 0.875rem;
+    background: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+    margin-top: auto;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+    }
+
+    .audit-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
