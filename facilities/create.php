@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $description = trim($_POST["description"]);
     $capacity = trim($_POST["capacity"]);
     $status = $_POST["status"];
-    
+
     $price_per_hour = trim($_POST["price_per_hour"]);
     $price_per_day = trim($_POST["price_per_day"]);
     $open_time = $_POST["open_time"];
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $advance_days_required = trim($_POST["advance_days_required"]);
     $min_duration_hours = trim($_POST["min_duration_hours"]);
     $max_duration_hours = trim($_POST["max_duration_hours"]);
-    
+
     $allowed_days = isset($_POST["allowed_days"]) ? implode(',', $_POST["allowed_days"]) : '1,2,3,4,5,6';
     $image = trim($_POST["image"]);
 
@@ -33,11 +33,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($name) || empty($capacity)) {
         $error = "Name and Capacity are required fields.";
-    } else {
+    }
+    else {
 
         $stmt = $conn->prepare("INSERT INTO facilities (name, description, capacity, status, price_per_hour, price_per_day, open_time, close_time, advance_days_required, min_duration_hours, max_duration_hours, allowed_days, image) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("ssisddssiiiss", $name, $description, $capacity, $status, $price_per_hour, $price_per_day, $open_time, $close_time, $advance_days_required, $min_duration_hours, $max_duration_hours, $allowed_days, $image);
-        
+
         if ($stmt->execute()) {
             $new_id = $conn->insert_id;
 
@@ -53,7 +54,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             header("Location: index.php");
             exit;
-        } else {
+        }
+        else {
             $error = "Error saving facility: " . $conn->error;
         }
     }
@@ -90,7 +92,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="form-container">
       <h2>Add Facility</h2>
       
-      <?php if (isset($error)) echo "<p class='error'>$error</p>"; ?>
+      <?php if (isset($error))
+    echo "<p class='error'>$error</p>"; ?>
       
       <form method="POST">
         <div class="grid-2">
