@@ -112,7 +112,7 @@ $result = $stmt->get_result();
                     <th>Action</th>
                     <th>Target Entity</th>
                     <th>Activity Details</th>
-                    <th>IP Address</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -134,12 +134,12 @@ $result = $stmt->get_result();
                                 <?= htmlspecialchars($row['details']) ?>
                             </div>
                         </td>
-                        <td class="ip-addr"><?= $row['ip_address'] ?></td>
+
                     </tr>
                 <?php endwhile; ?>
                 <?php if ($result->num_rows == 0): ?>
                     <tr>
-                        <td colspan="6" class="no-data">
+                        <td colspan="5" class="no-data">
                             No activity logs found matching your filters.
                         </td>
                     </tr>

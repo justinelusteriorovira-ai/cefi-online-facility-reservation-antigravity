@@ -11,29 +11,30 @@
     font-size: 1.875rem;
     font-weight: 700;
     margin: 0;
+    color: #013c10;
 }
 
 .add-btn {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: var(--accent-color);
-    color: #f8fafc;
+    background: #fcb900;
+    color: #013c10;
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
     border: none;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.875rem;
     cursor: pointer;
     transition: all 0.2s ease;
-    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 2px 8px rgba(252, 185, 0, 0.25);
 }
 
 .add-btn:hover {
-    background: #2563eb;
+    background: #e6a800;
     transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 6px 16px rgba(252, 185, 0, 0.35);
 }
 
 .add-btn span {
@@ -44,35 +45,35 @@
 .occasions-list {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    background: var(--card-bg);
-    padding: 2rem;
+    gap: 1rem;
+    background: #ffffff;
+    padding: 1.5rem;
     border-radius: 12px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    border: 1px solid rgba(1, 60, 16, 0.08);
 }
 
 .occasion-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
+    padding: 1.25rem;
+    border: 1px solid rgba(1, 60, 16, 0.1);
+    border-radius: 10px;
     transition: all 0.2s ease;
-    background: transparent;
+    background: #f9fbf9;
 }
 
 .occasion-card:hover {
-    border-color: var(--accent-color);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-    background: white;
+    border-color: #fcb900;
+    box-shadow: 0 4px 16px rgba(252, 185, 0, 0.15);
+    background: #fffbee;
 }
 
 .occ-info {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.25rem;
 }
 
 .occ-date-box {
@@ -80,63 +81,65 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgba(59, 130, 246, 0.1);
-    color: var(--accent-color);
-    width: 70px;
-    height: 70px;
-    border-radius: 12px;
+    background: #013c10;
+    color: #fcb900;
+    width: 64px;
+    height: 64px;
+    border-radius: 10px;
+    flex-shrink: 0;
 }
 
 .occ-day {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
     line-height: 1;
 }
 
 .occ-month {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 600;
     text-transform: uppercase;
     margin-top: 0.25rem;
+    color: rgba(252, 185, 0, 0.8);
 }
 
 .occ-details h3 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.1rem;
+    margin: 0 0 0.4rem 0;
+    font-size: 1rem;
     font-weight: 700;
-    color: #f8fafc;
+    color: #1a1a1a;
 }
 
 .occ-type {
     display: inline-block;
-    padding: 0.25rem 0.6rem;
+    padding: 0.2rem 0.6rem;
     border-radius: 4px;
     font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    background: #e2e8f0;
-    color: #f8fafc;
+    background: #e5e7eb;
+    color: #374151;
 }
 
 .occ-type.type-school_event {
     background: #ede9fe;
-    color: #8b5cf6;
+    color: #6d28d9;
 }
 
 .occ-type.type-holiday {
     background: #fee2e2;
-    color: #ef4444;
+    color: #b91c1c;
 }
 
 .occ-type.type-blocked {
-    background: rgba(255, 255, 255, 0.1);
-    color: #475569;
+    background: #f3f4f6;
+    color: #6b7280;
 }
 
 .occ-type.type-announcement {
-    background: #ffedd5;
-    color: #f97316;
+    background: #fef3c7;
+    color: #d97706;
 }
 
 .occ-actions {
@@ -145,8 +148,8 @@
 }
 
 .btn-icon {
-    background: transparent;
-    border: 1px solid var(--border-color);
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
     width: 36px;
     height: 36px;
     border-radius: 8px;
@@ -156,20 +159,23 @@
     cursor: pointer;
     transition: all 0.2s;
     font-size: 1rem;
+    color: #6b7280;
 }
 
 .btn-icon:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: #e5e7eb;
 }
 
 .btn-icon.edit-occ:hover {
-    border-color: #60a5fa;
-    color: #60a5fa;
+    border-color: #013c10;
+    color: #013c10;
+    background: #f0f7f2;
 }
 
 .btn-icon.btn-delete:hover {
-    border-color: #ef4444;
-    color: #ef4444;
+    border-color: #dc2626;
+    color: #dc2626;
+    background: #fee2e2;
 }
 
 /* Modal Form styling specific for occasions */
@@ -188,6 +194,7 @@
 .form-group label {
     font-weight: 600;
     font-size: 0.85rem;
+    color: #4a7c59;
 }
 
 .form-group input[type="text"],
@@ -196,19 +203,22 @@
 .form-group textarea {
     padding: 0.75rem;
     border-radius: 8px;
-    border: 1px solid var(--border-color);
+    border: 1.5px solid #c8d9cc;
     font-family: inherit;
     font-size: 0.9rem;
     width: 100%;
     transition: border-color 0.2s;
+    background: #f7f9f7;
+    color: #1a1a1a;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    border-color: #013c10;
+    box-shadow: 0 0 0 3px rgba(1, 60, 16, 0.1);
+    background: #ffffff;
 }
 
 .form-group input[type="color"] {
@@ -216,7 +226,7 @@
     height: 42px;
     padding: 0;
     border-radius: 8px;
-    border: 1px solid var(--border-color);
+    border: 1.5px solid #c8d9cc;
     cursor: pointer;
 }
 
@@ -231,9 +241,9 @@
 }
 
 .submit-btn {
-    background: var(--accent-color);
-    color: #f8fafc;
-    font-weight: 600;
+    background: #fcb900;
+    color: #013c10;
+    font-weight: 700;
     border: none;
     padding: 0.875rem;
     border-radius: 8px;
@@ -244,9 +254,9 @@
 }
 
 .submit-btn:hover {
-    background: #2563eb;
+    background: #e6a800;
     transform: translateY(-2px);
-    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 4px 12px rgba(252, 185, 0, 0.3);
 }
 
 @media (max-width: 640px) {
@@ -265,7 +275,7 @@
     .occ-actions {
         width: 100%;
         justify-content: flex-end;
-        border-top: 1px dashed var(--border-color);
+        border-top: 1px dashed rgba(1, 60, 16, 0.1);
         padding-top: 1rem;
     }
 
